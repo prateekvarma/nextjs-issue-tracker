@@ -24,7 +24,9 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-zinc-500 hover:text-zinc-800 trasition-colors"
+              className={`${
+                currentPath === link.href ? "text-zinc-900" : "text-zinc-500"
+              } hover:text-zinc-800 trasition-colors`}
             >
               {link.label}
             </Link>
