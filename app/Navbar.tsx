@@ -7,7 +7,6 @@ import classNames from "classnames";
 
 export default function Navbar() {
   const currentPath = usePathname();
-  console.log("current path: ", currentPath);
 
   const links = [
     { label: "Dashboard", href: "/" },
