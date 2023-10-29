@@ -15,8 +15,12 @@ export default function NewIssuePage() {
   const { register, handleSubmit } = useForm<IssueForm>();
 
   const submitHandler = async (data: IssueForm) => {
-    await axios.post("/api/issues", data);
-    router.push("/issues");
+    try {
+      await axios.post("/api/issues", data);
+      router.push("/issues");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
