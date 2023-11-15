@@ -24,7 +24,9 @@ export default async function IssuesPage() {
           {issues.map((issue) => {
             return (
               <Table.Row key={issue.id}>
-                <Table.Cell>{issue.title}</Table.Cell>
+                <Table.Cell>
+                  <Link href={`/issues/${issue.id}`}>{issue.title}</Link>
+                </Table.Cell>
                 <Table.Cell>
                   <IssueStatusBadge status={issue.status} />
                 </Table.Cell>
